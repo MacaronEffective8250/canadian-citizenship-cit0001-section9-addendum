@@ -3,13 +3,13 @@
 [![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
 [![License: CC0](https://img.shields.io/badge/License-CC0-lightgrey.svg)](https://creativecommons.org/publicdomain/zero/1.0/)
 
-Provides editable PDF addendum templates based on Section 9 for great-grandparent citizenship information in Canadian citizenship applications (CIT 0001).
+Provides editable PDF addendum templates based on Section 9 for great-grandparent citizenship information in Canadian citizenship certificate applications (CIT 0001).
 
 **Community**: Created for the https://www.reddit.com/r/Canadiancitizenship community.
 
 ## ⚠️ Disclaimer
 
-**These are NOT official government documents.** They are volunteer-created templates to assist with citizenship applications. This material is provided "as is" without warranties of any kind, either express or implied. The creators assume no responsibility for errors, omissions, or damages arising from use of these documents. 
+**These are NOT official government documents.** They are volunteer-created templates to assist with Canadian citizenship certificate applications. This material is provided "as is" without warranties of any kind, either express or implied. The creators assume no responsibility for errors, omissions, or damages arising from use of these documents. 
 
 **Use at your own risk and always verify requirements with official IRCC sources before submitting your application.**
 
@@ -17,7 +17,7 @@ Provides editable PDF addendum templates based on Section 9 for great-grandparen
 
 1. **Visit the website**: See `index.html` (or GitHub Pages) for which PDF to use
 2. **Download your document**: Select the appropriate generation template
-3. **Fill and submit**: Complete your chosen PDF and submit with your CIT 0001 application
+3. **Fill and submit**: Complete your chosen PDF and submit with your CIT 0001 certificate application
 
 **For developers:** Install dependencies with `pip install reportlab` and run `python generate_addendum.py` to regenerate templates.
 
@@ -26,7 +26,7 @@ Provides editable PDF addendum templates based on Section 9 for great-grandparen
 ### Basic Usage
 
 ```bash
-# Generate all G3-G20 templates (default) - creates 36 PDFs
+# Generate all G3-G20 templates (default) creates 36 PDFs
 python generate_addendum.py
 
 # Generate specific generation template
