@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CIT 0001 Section 9 Great Grandparent Addendum Forms</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', 'Times New Roman', serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #d52b1e 0%, #b71c1c 50%, #8b0000 100%);
+            color: white;
+            padding: 2rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '🍁';
+            position: absolute;
+            font-size: 3rem;
+            opacity: 0.2;
+            animation: float 6s ease-in-out infinite;
+            left: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        header::after {
+            content: '🍁';
+            position: absolute;
+            font-size: 2.5rem;
+            opacity: 0.3;
+            animation: float 4s ease-in-out infinite reverse;
+            right: 10%;
+            top: 30%;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(-50%) rotate(0deg); }
+            50% { transform: translateY(-60%) rotate(10deg); }
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            font-weight: normal;
+        }
+
+        main {
+            padding: 3rem 0;
+        }
+
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 2rem;
+            margin: 2rem 0;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1), 0 1px 3px rgba(0,0,0,0.08);
+            border: 1px solid #e1e1e1;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15), 0 3px 6px rgba(0,0,0,0.1);
+        }
+
+        h2 {
+            color: #d52b1e;
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            border-bottom: 3px solid #d52b1e;
+            padding-bottom: 0.5rem;
+        }
+
+        h3 {
+            color: #b71c1c;
+            font-size: 1.4rem;
+            margin: 1.5rem 0 1rem 0;
+        }
+
+        .intro {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #555;
+        }
+
+        .generation-explanation {
+            background: #f8f9fa;
+            border-left: 4px solid #d52b1e;
+            padding: 1.5rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+
+        .generation-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1rem 0;
+            font-size: 0.95rem;
+        }
+
+        .generation-table th,
+        .generation-table td {
+            border: 1px solid #ddd;
+            padding: 0.75rem;
+            text-align: left;
+        }
+
+        .generation-table th {
+            background: #d52b1e;
+            color: white;
+            font-weight: bold;
+        }
+
+        .generation-table tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        .generation-table tr:hover {
+            background: #e8f4f8;
+        }
+
+        .document-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .document-card {
+            background: #f8f9fa;
+            border: 1px solid #e1e1e1;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.2s ease;
+        }
+
+        .document-card:hover {
+            background: #e8f4f8;
+            border-color: #d52b1e;
+            transform: translateY(-1px);
+        }
+
+        .document-card h4 {
+            color: #d52b1e;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .language-links {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .pdf-link {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background: #d52b1e;
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            transition: all 0.2s ease;
+        }
+
+        .pdf-link:hover {
+            background: #b71c1c;
+            transform: translateY(-1px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+
+        .pdf-link.french {
+            background: #1976d2;
+        }
+
+        .pdf-link.french:hover {
+            background: #1565c0;
+        }
+
+        .example {
+            background: #e8f5e8;
+            border: 1px solid #4caf50;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+        }
+
+        .warning {
+            background: #fff3cd;
+            border: 1px solid #ffc107;
+            border-radius: 6px;
+            padding: 1rem;
+            margin: 1rem 0;
+            border-left: 4px solid #ffc107;
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer a {
+            color: #d52b1e;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .card {
+                padding: 1.5rem;
+                margin: 1rem 0;
+            }
+            
+            .generation-table {
+                font-size: 0.85rem;
+            }
+            
+            .generation-table th,
+            .generation-table td {
+                padding: 0.5rem;
+            }
+            
+            .language-links {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Great Grandparent Addendum Templates for CIT 0001 Section 9</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="card">
+                <h2>📋 About This Project</h2>
+                
+                <div class="warning">
+                    <strong>⚠️ DISCLAIMER:</strong> These are <strong>NOT official government documents</strong>. 
+                    They are volunteer-created addendums to assist with citizenship applications. 
+                    This material is provided "as is" without warranties of any kind, either express or implied. 
+                    The creators assume no responsibility for errors, omissions, or damages arising from use of these documents. 
+                    Use at your own risk and always verify requirements with official IRCC sources before submitting your application.
+                </div>
+                
+                <p class="intro">
+                    The Canadian Citizenship Application (CIT 0001) form has limited space for documenting 
+                    multiple generations of family citizenship information. This website offers editable PDF 
+                    addendums based on Section 9 for great-grandparent information.
+                </p>
+                
+                <p>These forms are available for download in both <strong>English</strong> and <strong>French</strong>, 
+                covering applicant generations G3 through G20 (supporting families with deep Canadian heritage 
+                spanning many generations).</p>
+            </div>
+
+            <div class="card">
+                <h2>🔢 Understanding G-Numbers</h2>
+                <p>The "G-number" (generation number) refers to the <em>last person in your line of descent who was born or naturalized in Canada</em> (<a href="https://www.reddit.com/r/Canadiancitizenship/wiki/index/" target="_blank">r/CanadianCitizenship Wiki</a>). 
+                For detailed information about generation numbers and Canadian citizenship by descent, see the 
+                <a href="https://www.reddit.com/r/Canadiancitizenship/wiki/index/" target="_blank">Canadian Citizenship Wiki</a>.</p>
+
+                <div class="example">
+                    <h4>📝 Example:</h4>
+                    <p>If an applicant is <strong>G3</strong> (their great-grandparent was the last Canadian-born person in their line), 
+                    they need to document their <strong>great-grandparents</strong> to prove their citizenship eligibility through them. 
+                    The <strong>G03 addendum</strong> has 2 pages for this documentation.</p>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📋 How to Use These Documents</h2>
+                
+                <h3>Step 1: Determine Your Generation Number</h3>
+                <p>Find the last person in your line of descent who was born or naturalized in Canada. Count how many generations back that person is from you - that's your G-number.</p>
+
+                <h3>Step 2: Download the Appropriate Document</h3>
+                <p>Select the document that matches your G-number and preferred language (English or French).</p>
+
+                <h3>Step 3: Complete the Form</h3>
+                <p>The PDFs are editable - you can fill them out digitally or print and complete by hand. 
+                If you don't know certain information, enter "unknown". If information doesn't apply, enter "not applicable" or "NA".</p>
+
+                <h3>Step 4: Submit with Your CIT 0001 Application</h3>
+                <p>Include the completed addendum as part of your Canadian citizenship application submission.</p>
+
+                <div class="warning">
+                    <strong>⚠️ Important:</strong> These addendum forms are supplementary to the official CIT 0001 form. 
+                    Always check the latest requirements on the 
+                    <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/guide-0001-application-citizenship-certificate-adults-minors-proof-citizenship-section-3.html" target="_blank">official Government of Canada website</a> 
+                    and download the current <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/cit0001.html" target="_blank">CIT 0001 Application Form</a>.
+                    <br><br>
+                    <strong>📋 Before using these addendums:</strong> Check Section 9 instructions in your official CIT 0001 form 
+                    (located below the signature area) for specific requirements about documenting grandparent information.
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>📄 Available Documents</h2>
+                <p>Select the document that matches your generation number. Each document is available in both English and French:</p>
+                
+                <table class="generation-table">
+                    <thead>
+                        <tr>
+                            <th>Your Generation Number is:</th>
+                            <th>Your G0 is your:</th>
+                            <th>Pages</th>
+                            <th>English</th>
+                            <th>Français</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>G03</strong></td>
+                            <td>Great Grandparents</td>
+                            <td>2</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G03.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G03.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G04</strong></td>
+                            <td>2× Great Grandparents</td>
+                            <td>4</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G04.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G04.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G05</strong></td>
+                            <td>3× Great Grandparents</td>
+                            <td>6</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G05.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G05.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G06</strong></td>
+                            <td>4× Great Grandparents</td>
+                            <td>8</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G06.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G06.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G07</strong></td>
+                            <td>5× Great Grandparents</td>
+                            <td>10</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G07.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G07.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G08</strong></td>
+                            <td>6× Great Grandparents</td>
+                            <td>12</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G08.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G08.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G09</strong></td>
+                            <td>7× Great Grandparents</td>
+                            <td>14</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G09.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G09.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G10</strong></td>
+                            <td>8× Great Grandparents</td>
+                            <td>16</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G10.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G10.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G11</strong></td>
+                            <td>9× Great Grandparents</td>
+                            <td>18</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G11.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G11.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G12</strong></td>
+                            <td>10× Great Grandparents</td>
+                            <td>20</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G12.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G12.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G13</strong></td>
+                            <td>11× Great Grandparents</td>
+                            <td>22</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G13.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G13.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G14</strong></td>
+                            <td>12× Great Grandparents</td>
+                            <td>24</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G14.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G14.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G15</strong></td>
+                            <td>13× Great Grandparents</td>
+                            <td>26</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G15.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G15.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G16</strong></td>
+                            <td>14× Great Grandparents</td>
+                            <td>28</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G16.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G16.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G17</strong></td>
+                            <td>15× Great Grandparents</td>
+                            <td>30</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G17.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G17.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G18</strong></td>
+                            <td>16× Great Grandparents</td>
+                            <td>32</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G18.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G18.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G19</strong></td>
+                            <td>17× Great Grandparents</td>
+                            <td>34</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G19.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G19.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                        <tr>
+                            <td><strong>G20</strong></td>
+                            <td>18× Great Grandparents</td>
+                            <td>36</td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_EN_G20.pdf" class="pdf-link">📄 Download</a></td>
+                            <td><a href="documents/CIT0001_Section9_Grandparent_Addendum_FR_G20.pdf" class="pdf-link french">📄 Télécharger</a></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>
+                <a href="https://github.com/MacaronEffective8250/canadian-citizenship-cit0001-section9-addendum">View on GitHub</a> | 
+                <a href="https://www.canada.ca/en/immigration-refugees-citizenship/services/application/application-forms-guides/cit0001.html" target="_blank">Official CIT 0001 Form</a> | 
+                <a href="https://www.reddit.com/r/Canadiancitizenship/wiki/index/" target="_blank">r/CanadianCitizenship Wiki</a>
+            </p>
+            <p style="margin-top: 1rem; font-size: 0.9rem; opacity: 0.8;">
+                This work is dedicated to the public domain under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Universal</a>.
+            </p>
+            <p style="margin-top: 0.5rem; font-size: 0.9rem; opacity: 0.8;">
+                This is an independent project to assist with Canadian citizenship applications. 
+                It is not affiliated with the Government of Canada.
+            </p>
+        </div>
+    </footer>
+</body>
+</html>

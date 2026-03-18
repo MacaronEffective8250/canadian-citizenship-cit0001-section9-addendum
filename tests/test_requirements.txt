@@ -1,0 +1,13 @@
+# Test requirements for PDF consistency testing
+# Install with: pip install -r test_requirements.txt
+
+# PDF processing and comparison
+PyPDF2>=2.0.0
+reportlab>=3.6.0
+
+# Testing framework (usually included with Python)
+# unittest - built-in module
+
+# Optional: For advanced PDF comparison
+# pymupdf>=1.20.0  # Alternative PDF library for deeper analysis
+# pillow>=8.0.0   # For PDF to image conversion and comparison

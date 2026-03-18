@@ -1,0 +1,222 @@
+{
+  "EN": {
+    "metadata": {
+      "title": "CIT 0001 Section 9 - Grandparent Addendum",
+      "author": "CIT0001 Grandparent Addendum Generator v1.0.0",
+      "subject": "Canadian Citizenship Application - Great-Grandparent Information",
+      "creator": "CIT0001 Addendum Generator",
+      "producer": "ReportLab PDF Library - www.reportlab.com",
+      "keywords": "CIT 0001, Canadian Citizenship, Grandparents, Immigration, Form, Addendum"
+    },
+    "headers": {
+      "main_header": "ADDENDUM - Form CIT 0001, Section 9 - Great Grandparents, Page {page_num} of {total_pages}",
+      "generation_header": "ADDENDUM - Form CIT 0001, Section 9 - {gen_title}, Page {page_num} of {total_pages}",
+      "end_indicator": "--- END OF SECTION 9 GREAT GRANDPARENT ADDENDUM ---",
+      "main_section_title": "Tell us about your great-grandparents",
+      "generation_section_title": "Tell us about your {multiplier} great-grandparents",
+      "instructions": "(If you do not know the information requested, enter 'unknown'. If the information does not apply, enter 'not applicable' or 'NA'.)"
+    },
+    "form_fields": {
+      "linear_fields": [
+        "Surname/Last name",
+        "Given name(s)",
+        "Other names used"
+      ],
+      "grid_fields": [
+        "Country or territory of birth",
+        "Date of birth (YYYY-MM-DD)",
+        "Canadian birth certificate number\\n(if applicable/known)",
+        "Canadian citizenship certificate\\nnumber (if applicable/known)"
+      ],
+      "citizenship_details": "Details on how this {generation_type} obtained Canadian citizenship",
+      "date_of_death": "Date of death (YYYY-MM-DD) (If applicable)"
+    },
+    "person_labels": {
+      "grandparent_1": "Full name of Grandparent 1",
+      "grandparent_2": "Full name of Grandparent 2",
+      "generation_person": "Full name of {person_being_described} {grandparent_num}"
+    },
+    "form_field_labels": {
+      "full_name_of": "Full name of {person_being_described} {grandparent_num}",
+      "parent_a_of": "Parent A) of {person_being_described} {grandparent_num}",
+      "parent_b_of": "Parent B) of {person_being_described} {grandparent_num}",
+      "details_parent_a": "Details on how Parent A of {person_being_described} {grandparent_num} obtained citizenship",
+      "details_parent_b": "Details on how Parent B of {person_being_described} {grandparent_num} obtained citizenship",
+      "death_date_parent_a": "Parent A of {person_being_described} {grandparent_num} date of death",
+      "death_date_parent_b": "Parent B of {person_being_described} {grandparent_num} date of death"
+    },
+    "questions": {
+      "main_question_gp1": "If Grandparent 1 was born outside Canada, was one of Grandparent 1's parents (i.e. your great-grandparents) a Canadian citizen and/or a Crown servant of Canada at the time of this parent's birth or adoption?",
+      "main_question_gp2": "If Grandparent 2 was born outside Canada, was one of Grandparent 2's parents (i.e. your great-grandparents) a Canadian citizen and/or a Crown servant of Canada at the time of this parent's birth or adoption?",
+      "main_question_generation": "If {person_being_described} {grandparent_num} was born outside Canada, was one of {person_being_described} {grandparent_num}'s parents (i.e. your {next_gen}) a Canadian citizen and/or a Crown servant of Canada at the time of this parent's birth or adoption?"
+    },
+    "radio_buttons": {
+      "birth_outside_canada_gp1": "Was Grandparent 1 born outside Canada?",
+      "birth_outside_canada_gp2": "Was Grandparent 2 born outside Canada?",
+      "birth_outside_canada_generation": "Was {person_being_described} {grandparent_num} born outside Canada?",
+      "parents_canadian_gp1": "Was one of Grandparent 1's parents (your great-grandparents) Canadian?",
+      "parents_canadian_gp2": "Was one of Grandparent 2's parents (your great-grandparents) Canadian?",
+      "parents_canadian_generation": "Was one of {person_being_described} {grandparent_num}'s parents (your {next_gen}) Canadian?",
+      "yes": "Yes",
+      "no_skip_to_gp2": "No: skip to Grandparent 2",
+      "no_skip_to_next": "No: skip to {next_text}",
+      "no_skip_to_end": "No: skip to end of addendum and continue the main application",
+      "no_skip_to_next_page": "No: skip to next addendum page"
+    },
+    "notes": {
+      "notes_gp1": "Notes about parents of Grandparent 1",
+      "notes_gp2": "Notes about parents of Grandparent 2",
+      "notes_generation": "Notes about parents of {person_being_described} {grandparent_num}"
+    },
+    "details": {
+      "detail_request": "If you chose a 'Yes' response, please provide the following details"
+    },
+    "parent_headers": {
+      "parent_a_gp1": "Parent A) of Grandparent 1",
+      "parent_b_gp1": "Parent B) of Grandparent 1",
+      "parent_a_gp2": "Parent A) of Grandparent 2",
+      "parent_b_gp2": "Parent B) of Grandparent 2",
+      "parent_a_generation": "Parent A) of {person_being_described} {grandparent_num}",
+      "parent_b_generation": "Parent B) of {person_being_described} {grandparent_num}"
+    },
+    "generation_config": {
+      "base_title": "Great Grandparents",
+      "base_person_described": "Grandparent",
+      "base_generation_documented": "Great Grandparent",
+      "base_next_generation": "great-grandparents",
+      "multiplied_title": "{multiplier} Great Grandparents",
+      "multiplied_person_described": "{prev_multiplier} Great Grandparent",
+      "multiplied_generation_documented": "{multiplier} Great Grandparent",
+      "multiplied_next_generation": "{multiplier} great-grandparents"
+    },
+    "cli": {
+      "description": "Generate CIT 0001 Section 9 Grandparent Addendum PDFs for different applicant generations",
+      "data_help": "JSON file containing form data for pre-filling",
+      "output_help": "Output PDF filename (default: CIT0001_Section9_Grandparent_Addendum.pdf)",
+      "generation_help": "Generate single document for specific applicant generation (3-20). If not specified, generates all G3-G20 documents.",
+      "version": "CIT0001 Grandparent Addendum Generator v1.0.0"
+    },
+    "messages": {
+      "pdf_created": "Editable PDF created: {filename} ({total_pages} pages total)",
+      "generated_single": "Generated G{generation}: {filename} ({pages} pages)",
+      "generated_all": "Successfully generated {count} generation documents:",
+      "warning_json_load": "Warning: Could not load JSON data from {json_file_path}: {e}",
+      "warning_bottom_margin": "Warning: Content may be too close to bottom margin on page {page_number}. End position: {section_end_y}",
+      "error_data_not_found": "Error: Data file not found: {data_file}",
+      "error_generation_range": "Error: Generation must be between 3 and 20. G1 and G2 applicants don't need addendums.",
+      "error_custom_filename": "Error: Cannot specify custom output filename when generating all documents. Use -g to generate a single document.",
+      "error_generating": "Error generating PDF(s): {e}",
+      "error_generating_single": "Error generating G{generation} document: {e}"
+    }
+  },
+  "FR": {
+    "metadata": {
+      "title": "CIT 0001 Section 9 - Addendum des grands-parents",
+      "author": "Générateur d'addendum des grands-parents CIT0001 v1.0.0",
+      "subject": "Demande de citoyenneté canadienne - Informations sur les arrière-grands-parents",
+      "creator": "Généré avec Claude Code - https://claude.ai/code",
+      "producer": "Bibliothèque PDF ReportLab - www.reportlab.com",
+      "keywords": "CIT 0001, Citoyenneté canadienne, Grands-parents, Immigration, Formulaire, Addendum"
+    },
+    "headers": {
+      "main_header": "ADDENDUM - Formulaire CIT 0001, Section 9 - Arrière-grands-parents, Page {page_num} de {total_pages}",
+      "generation_header": "ADDENDUM - Formulaire CIT 0001, Section 9 - {gen_title}, Page {page_num} de {total_pages}",
+      "end_indicator": "--- FIN DE L'ADDENDUM SECTION 9 ARRIÈRE-GRANDS-PARENTS ---",
+      "main_section_title": "Parlez-nous de vos arrière-grands-parents",
+      "generation_section_title": "Parlez-nous de vos {multiplier}",
+      "instructions": "(Si vous ne connaissez pas les informations demandées, inscrivez 'inconnu'. Si les informations ne s'appliquent pas, inscrivez 'sans objet' ou 'S.O.'.)"
+    },
+    "form_fields": {
+      "linear_fields": [
+        "Nom de famille",
+        "Prénom(s)",
+        "Autres noms utilisés (nom à la naissance, nom de jeune fille)"
+      ],
+      "grid_fields": [
+        "Pays ou territoire de naissance",
+        "Date de naissance (AAAA-MM-JJ)",
+        "Numéro de certificat de naissance\\ncanadien (s'il y a lieu)",
+        "Numéro de certificat de citoyenneté\\ncanadien (s'il y a lieu)"
+      ],
+      "citizenship_details": "Détails sur la façon dont ce {generation_type} a obtenu la citoyenneté canadienne",
+      "date_of_death": "Date du décès (AAAA-MM-JJ) (le cas échéant)"
+    },
+    "person_labels": {
+      "grandparent_1": "Nom complet du grand-parent 1",
+      "grandparent_2": "Nom complet du grand-parent 2",
+      "generation_person": "Nom complet de {person_being_described} {grandparent_num}"
+    },
+    "form_field_labels": {
+      "full_name_of": "Nom complet de {person_being_described} {grandparent_num}",
+      "parent_a_of": "Parent A) de {person_being_described} {grandparent_num}",
+      "parent_b_of": "Parent B) de {person_being_described} {grandparent_num}",
+      "details_parent_a": "Détails sur la façon dont le parent A) de {person_being_described} {grandparent_num} a obtenu la citoyenneté",
+      "details_parent_b": "Détails sur la façon dont le parent B) de {person_being_described} {grandparent_num} a obtenu la citoyenneté",
+      "death_date_parent_a": "Date du décès du parent A) de {person_being_described} {grandparent_num}",
+      "death_date_parent_b": "Date du décès du parent B) de {person_being_described} {grandparent_num}"
+    },
+    "questions": {
+      "main_question_gp1": "Si le grand-parent 1 est né à l'extérieur du Canada, est-ce que l'un des parents du grand-parent 1 (c'est-à-dire vos arrière-grands-parents) était citoyen Canadien et/ou fonctionnaire de la Couronne du Canada au moment de la naissance ou de l'adoption de ce parent?",
+      "main_question_gp2": "Si le grand-parent 2 est né à l'extérieur du Canada, est-ce que l'un des parents du grand-parent 2 (c'est-à-dire vos arrière-grands-parents) était citoyen Canadien et/ou fonctionnaire de la Couronne du Canada au moment de la naissance ou de l'adoption de ce parent?",
+      "main_question_generation": "Si {person_being_described} {grandparent_num} est né à l'extérieur du Canada, est-ce que l'un des parents de {person_being_described} {grandparent_num} (c'est-à-dire vos {next_gen}) était citoyen Canadien et/ou fonctionnaire de la Couronne du Canada au moment de la naissance ou de l'adoption de ce parent?"
+    },
+    "radio_buttons": {
+      "birth_outside_canada_gp1": "Le grand-parent 1 est-il né à l'extérieur du Canada?",
+      "birth_outside_canada_gp2": "Le grand-parent 2 est-il né à l'extérieur du Canada?",
+      "birth_outside_canada_generation": "{person_being_described} {grandparent_num} est-il né à l'extérieur du Canada?",
+      "parents_canadian_gp1": "Est-ce que l'un des parents du grand-parent 1 (vos arrière-grands-parents) était Canadien?",
+      "parents_canadian_gp2": "Est-ce que l'un des parents du grand-parent 2 (vos arrière-grands-parents) était Canadien?",
+      "parents_canadian_generation": "Est-ce que l'un des parents de {person_being_described} {grandparent_num} (vos {next_gen}) était Canadien?",
+      "yes": "Oui",
+      "no_skip_to_gp2": "Non: passer au grand-parent 2",
+      "no_skip_to_next": "Non: passer à {next_text}",
+      "no_skip_to_end": "Non: passer à la fin de l'addendum et continuer la demande principale",
+      "no_skip_to_next_page": "Non: passer à la page suivante de l'addendum"
+    },
+    "notes": {
+      "notes_gp1": "Commentaires sur les parents du grand-parent 1",
+      "notes_gp2": "Commentaires sur les parents du grand-parent 2",
+      "notes_generation": "Commentaires sur les parents de {person_being_described} {grandparent_num}"
+    },
+    "details": {
+      "detail_request": "Si vous avez répondu « Oui », donnez les détails suivants :"
+    },
+    "parent_headers": {
+      "parent_a_gp1": "Parent A) du grand-parent 1",
+      "parent_b_gp1": "Parent B) du grand-parent 1",
+      "parent_a_gp2": "Parent A) du grand-parent 2",
+      "parent_b_gp2": "Parent B) du grand-parent 2",
+      "parent_a_generation": "Parent A) de {person_being_described} {grandparent_num}",
+      "parent_b_generation": "Parent B) de {person_being_described} {grandparent_num}"
+    },
+    "generation_config": {
+      "base_title": "Arrière-grands-parents",
+      "base_person_described": "Grand-parent",
+      "base_generation_documented": "Arrière-grand-parent",
+      "base_next_generation": "arrière-grands-parents",
+      "multiplied_title": "{multiplier} Arrière-grands-parents",
+      "multiplied_person_described": "{prev_multiplier} Arrière-grand-parent",
+      "multiplied_generation_documented": "{multiplier} Arrière-grand-parent",
+      "multiplied_next_generation": "{multiplier} arrière-grands-parents"
+    },
+    "cli": {
+      "description": "Générer les PDF d'addendum des grands-parents CIT 0001 Section 9 pour différentes générations de demandeurs",
+      "data_help": "Fichier JSON contenant les données de formulaire pour le pré-remplissage",
+      "output_help": "Nom du fichier PDF de sortie (par défaut: CIT0001_Section9_Grandparent_Addendum.pdf)",
+      "generation_help": "Générer un seul document pour une génération spécifique de demandeur (3-20). Si non spécifié, génère tous les documents G3-G20.",
+      "version": "Générateur d'addendum des grands-parents CIT0001 v1.0.0"
+    },
+    "messages": {
+      "pdf_created": "PDF éditable créé: {filename} ({total_pages} pages au total)",
+      "generated_single": "G{generation} généré: {filename} ({pages} pages)",
+      "generated_all": "Généré avec succès {count} documents de génération:",
+      "warning_json_load": "Avertissement: Impossible de charger les données JSON de {json_file_path}: {e}",
+      "warning_bottom_margin": "Avertissement: Le contenu peut être trop proche de la marge inférieure à la page {page_number}. Position de fin: {section_end_y}",
+      "error_data_not_found": "Erreur: Fichier de données introuvable: {data_file}",
+      "error_generation_range": "Erreur: La génération doit être entre 3 et 20. Les demandeurs G1 et G2 n'ont pas besoin d'addendums.",
+      "error_custom_filename": "Erreur: Impossible de spécifier un nom de fichier de sortie personnalisé lors de la génération de tous les documents. Utilisez -g pour générer un seul document.",
+      "error_generating": "Erreur lors de la génération du/des PDF: {e}",
+      "error_generating_single": "Erreur lors de la génération du document G{generation}: {e}"
+    }
+  }
+}
