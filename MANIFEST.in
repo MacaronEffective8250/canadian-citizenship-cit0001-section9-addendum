@@ -1,7 +1,6 @@
 include README.md
 include LICENSE
-include CLAUDE.md
 include requirements.txt
-recursive-include cit0001_grandparent_addendum *.py
+recursive-include src/cit0001_addendum *.py *.json
 global-exclude *.pyc
 global-exclude __pycache__
