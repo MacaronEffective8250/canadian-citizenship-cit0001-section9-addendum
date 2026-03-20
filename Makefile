@@ -49,12 +49,12 @@ clean: test-clean
 # Generate all production PDFs
 generate:
 	@echo "Generating all production PDFs..."
-	$(PYTHON) generate_addendum_pdfs.py
+	$(PYTHON) generate_addendum.py
 
 # Generate specific generation (usage: make generate-g4)
 generate-g%:
 	@echo "Generating G$* documents..."
-	$(PYTHON) generate_addendum_pdfs.py -g $*
+	$(PYTHON) generate_addendum.py -g $*
 
 # Install test dependencies
 install-test-deps:
