@@ -5,6 +5,8 @@
 
 Provides editable PDF addendum templates based on Section 9 for great-grandparent citizenship information in Canadian citizenship certificate applications (CIT 0001).
 
+Instructions and links to files are at https://macaroneffective8250.github.io/canadian-citizenship-cit0001-section9-addendum/
+
 **Community**: Created for the https://www.reddit.com/r/Canadiancitizenship community.
 
 ## ⚠️ Disclaimer
